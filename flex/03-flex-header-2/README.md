@@ -1,3 +1,7 @@
+# What I learnt
+* I saw a glimpse on how to import font onto css.
+* I also got a better understanding of how child items take css from their parents.
+
 # Another common header style
 
 We're starting to sneak in a little more CSS that you haven't seen yet. Don't worry about this for now; we just want things to look a little bit prettier, and this CSS will not interfere with your task.
