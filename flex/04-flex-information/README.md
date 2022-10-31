@@ -1,3 +1,6 @@
+# What I learnt
+* I learnt that there is a simpler way to produce the outcome then what I usually do. I seem to make it a bit more complex, using more css then needed.
+
 # A very common website feature
 
 The goal of this exercise is to recreate a section that is found on many informational websites.
