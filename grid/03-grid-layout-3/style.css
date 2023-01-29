@@ -42,7 +42,7 @@
   background-color: #FF7755;
   grid-area: sidebar;
   display: grid;
-  gap: 50px;
+  gap: 50px 50px;
   grid-template: repeat(4, 1fr);
   text-align: center;
 }
@@ -86,6 +86,7 @@
   grid-area: article;
   display: grid;
   grid-template: 1fr/ repeat(auto-fit, minmax(250px, 1fr));
+  gap:15px;
 }
 
 .article p {
@@ -99,6 +100,8 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  display: grid;
+  grid-template-rows: 200px;
 }
 
 .card p {
