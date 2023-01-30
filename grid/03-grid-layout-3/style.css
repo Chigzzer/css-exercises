@@ -6,8 +6,7 @@
 .container {
   text-align: center;
   display: grid;
-  grid-template: 1fr 1fr 5fr 1fr / 1fr 4fr;
-  grid-template-areas: "header header" "sidebar nav" "sidebar article" "footer footer";
+  grid-template-columns: 1fr 4fr;
   gap: 4px;
 }
 
@@ -21,15 +20,18 @@
 
 .header {
   background-color: #393f4d;
-  grid-area: header;
+  grid-column: 1 / 3;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr;
+}
+
+.menu{
+  align-self: center;
 }
 
 .menu ul{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border: 1px red solid;
 }
 
 .menu ul,
@@ -40,11 +42,13 @@
 
 .sidebar {
   background-color: #FF7755;
-  grid-area: sidebar;
+  grid-column: 1/ 2;
+  grid-row: 2 / 4;
   display: grid;
   gap: 50px 50px;
   grid-template: repeat(4, 1fr);
   text-align: center;
+  justify-self: stretch;
 }
 
 .sidebar .photo {
@@ -53,27 +57,29 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  display: grid;
+  align-items: center;
 }
-
 
 .sidebar .side-content {
   background-color: white;
   color: black;
   font-size: 16px;
   font-weight: normal;
-  vertical-align: middle;
+  display: grid;
+  align-items: center;
 }
+
 
 .nav {
   background-color: #FF7755;
-  grid-area: nav;
-  display: grid;
-  grid-template: 1fr / 1fr;
+  grid-column: 2/3;
 }
 
 .nav ul{
   display: grid;
-  grid-template: 1fr / repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
 }
 
 .nav ul li {
@@ -83,9 +89,9 @@
 
 .article {
   background-color: #bccbde;
-  grid-area: article;
+  grid-column: 2/3;
   display: grid;
-  grid-template: 1fr/ repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap:15px;
 }
 
@@ -100,8 +106,7 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
-  display: grid;
-  grid-template-rows: 200px;
+  height: 200px;
 }
 
 .card p {
@@ -117,10 +122,14 @@
 
 .footer {
   background-color: #393f4d;
-  grid-area: footer;
+  grid-column: 1/3;
 }
 
 .footer p {
   font-size: 13px;
   font-weight: normal;  
+}
+
+.logo{
+  justify-self: flex-start;
 }
